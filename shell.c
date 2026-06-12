@@ -34,7 +34,7 @@ void moveToNewLine(int sig)
         if (getcwd(cwd, sizeof(cwd)) == NULL) {
             strcpy(cwd, "shell");
         }
-        // Print the identical colored prompt structure here!
+
         printf("\n%szaid@custom-shell%s:%s%s%s> ", 
                COLOR_GREEN, COLOR_RESET, 
                COLOR_BLUE, cwd, COLOR_RESET);
