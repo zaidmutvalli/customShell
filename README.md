@@ -17,6 +17,9 @@ This project implements a custom Unix-like shell in C. The shell accepts user co
 * The parent process waits for child execution to complete using `wait()` to prevent zombie processes.
 
 ### Built-in Commands
+#### General Command Execution
+* In addition to built-in commands, the shell supports execution of general system commands (e.g., ls, pwd, mkdir, sleep, grep) through the use of fork() and execvp().
+* Commands are executed in child processes while the parent shell waits for completion.
 
 #### `cd`
 
